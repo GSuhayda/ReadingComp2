@@ -34,11 +34,16 @@ MapFrame frame = new MapFrame();
         jScrollPane1 = new javax.swing.JScrollPane();
         testTextArea = new javax.swing.JTextArea();
         jTextField1 = new javax.swing.JTextField();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setMinimumSize(new java.awt.Dimension(800, 800));
+        getContentPane().setLayout(null);
 
         nameTextField.setFont(new java.awt.Font("Dialog", 1, 48)); // NOI18N
         nameTextField.setText("Exploring the Titanic");
+        getContentPane().add(nameTextField);
+        nameTextField.setBounds(164, 55, 473, 62);
 
         beginBtn.setText("Begin Game");
         beginBtn.addActionListener(new java.awt.event.ActionListener() {
@@ -46,11 +51,16 @@ MapFrame frame = new MapFrame();
                 beginBtnActionPerformed(evt);
             }
         });
+        getContentPane().add(beginBtn);
+        beginBtn.setBounds(345, 691, 98, 32);
 
         testTextArea.setColumns(20);
         testTextArea.setRows(5);
         testTextArea.setText("This is where an image of the titanic and a description of the journey will apear.  Directions will follow");
         jScrollPane1.setViewportView(testTextArea);
+
+        getContentPane().add(jScrollPane1);
+        jScrollPane1.setBounds(29, 354, 750, 250);
 
         jTextField1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jTextField1.setText("Enter Name Here");
@@ -59,43 +69,13 @@ MapFrame frame = new MapFrame();
                 jTextField1ActionPerformed(evt);
             }
         });
+        getContentPane().add(jTextField1);
+        jTextField1.setBounds(294, 649, 208, 24);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(nameTextField)
-                        .addGap(163, 163, 163))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(beginBtn)
-                        .addGap(357, 357, 357))))
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(29, 29, 29)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 750, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(294, 294, 294)
-                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 208, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(0, 21, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(55, 55, 55)
-                .addComponent(nameTextField)
-                .addGap(42, 42, 42)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 445, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 45, Short.MAX_VALUE)
-                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(beginBtn)
-                .addGap(77, 77, 77))
-        );
+        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\grant\\Documents\\GitHub\\ReadingComp2\\src\\images\\main.jpg")); // NOI18N
+        jLabel1.setText("jLabel1");
+        getContentPane().add(jLabel1);
+        jLabel1.setBounds(230, 120, 300, 220);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -149,6 +129,7 @@ MapFrame frame = new MapFrame();
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton beginBtn;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JLabel nameTextField;
